@@ -43,7 +43,27 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.ico">
+  <link rel="preload" href="css/skeleton-light.css" as="style">
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="preload" href="css/brands.css" as="style">
+  <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/logo-viaarto-redondo-transparente.png" as="image">
+  <script>
+    // Detectar preferência de tema do usuário
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+    // Função para alternar o tema
+    function setTheme() {
+      const theme = prefersDarkScheme.matches ? "dark" : "light";
+      document.querySelector('link[href*="skeleton-"]').href = `css/skeleton-${theme}.css`;
+    }
+
+    // Configurar tema inicial
+    setTheme();
+
+    // Ouvir mudanças na preferência do usuário
+    prefersDarkScheme.addEventListener("change", setTheme);
+  </script>
 </head>
 
 <body>
@@ -55,7 +75,7 @@
       <div class="column" style="margin-top: 10%">
 
         <!-- Your Image Here -->
-        <img src="images/littlelink.svg" class="avatar" srcset="images/logo-viaarto-redondo-transparente.png" alt="">
+        <img src="images/littlelink.svg" class="avatar" srcset="images/logo-viaarto-redondo-transparente.png" alt="Logo da Via Arto">
 
         <!-- Title -->
         <h1 role="heading">Via Arto</h1>
@@ -65,35 +85,38 @@
         <p>Nós somos uma empresa com soluções completas de brindes corporativos e produtos personalizados</p>
 
         <!-- WhatsApp -->
-        <a class="button button-whatsapp" href="https://wa.me/5511912394099" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/whatsapp.svg" alt="">WhatsApp 11 91239-4099</a><br>
+        <a class="button button-whatsapp" href="https://wa.me/5511912394099" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/whatsapp.svg" alt="WhatsApp">WhatsApp 11 91239-4099</a><br>
 
         <!-- Site Corporativo -->
-        <a class="button button-default" href="https://corp.viaarto.com.br/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-homepage.svg" alt="">Visite Nosso Site</a><br>
+        <a class="button button-default" href="https://corp.viaarto.com.br/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-homepage.svg" alt="Site">Visite Nosso Site</a><br>
 
         <!-- Catalogo de Produtos -->
-        <a class="button button-default" href="https://viaartocorp.com.br/catalogo" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-shopping-bag.svg" alt="">Catálogo de Produtos</a><br>
+        <a class="button button-default" href="https://viaartocorp.com.br/catalogo" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-shopping-bag.svg" alt="Catálogo">Catálogo de Produtos</a><br>
 
         <!-- LinkedIn -->
-        <a class="button button-linked" href="https://www.linkedin.com/company/viaarto/about/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/linkedin.svg" alt="">LinkedIn</a><br>
+        <a class="button button-linked" href="https://www.linkedin.com/company/viaarto/about/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/linkedin.svg" alt="LinkedIn">LinkedIn</a><br>
 
         <!-- Instagram -->
-        <a class="button button-instagram" href="https://www.instagram.com/viaartobr" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/instagram.svg" alt="">Siga nosso Instagram @viaartobr</a><br>
+        <a class="button button-instagram" href="https://www.instagram.com/viaartobr" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/instagram.svg" alt="Instagram">Siga nosso Instagram @viaartobr</a><br>
 
         <!-- Cal.com -->
-        <a class="button button-cal" href="https://cal.com/viaarto" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/cal.svg" alt="">Agende uma conversa</a><br>
+        <a class="button button-cal" href="https://cal.com/viaarto" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/cal.svg" alt="Agendar">Agende uma conversa</a><br>
 
         <!-- Peça Seu Orçamento Por Email -->
-        <a class="button button-default" href="mailto:corporativo@viaarto.com.br" rel="noopener" role="button"><img class="icon" src="images/icons/generic-email-alt.svg" alt="">Envie um e-mail</a><br>
+        <a class="button button-default" href="mailto:corporativo@viaarto.com.br" rel="noopener" role="button"><img class="icon" src="images/icons/generic-email-alt.svg" alt="Email">Envie um e-mail</a><br>
 
         <!-- Generic Blog -->
        <!--
-         <a class="button button-default" href="https://corp.viaarto.com.br/blog/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-blog.svg" alt="">Visite Nosso Blog</a><br>
+         <a class="button button-default" href="https://corp.viaarto.com.br/blog/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-blog.svg" alt="Blog">Visite Nosso Blog</a><br>
        -->
        
         <!-- Generic Map 
-        <a class="button button-default" href="/mapa" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-map.svg" alt="">Nosso Endereço</a><br>
+        <a class="button button-default" href="/mapa" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-map.svg" alt="Mapa">Nosso Endereço</a><br>
         -->
 
+        <a class="button button-default share-button" onclick="shareWebsite()" role="button">
+          <img class="icon" src="images/icons/share.svg" alt="Compartilhar">Compartilhe
+        </a><br>
 
         <br>
         <p><strong>Via Arto - Brindes Corporativos</strong> <br> <small>Av. Papa Pio XII, 471 - Sala 32 - Macedo - Guarulhos - SP - 07113-040</small> </p>
@@ -104,6 +127,21 @@
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    function shareWebsite() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Via Arto - Brindes Corporativos',
+          text: 'Conheça a Via Arto, soluções completas em brindes corporativos e produtos personalizados.',
+          url: window.location.href
+        })
+        .catch((error) => console.log('Erro ao compartilhar:', error));
+      } else {
+        // Fallback para navegadores sem suporte
+        prompt('Copie o link e compartilhe:', window.location.href);
+      }
+    }
+  </script>
 </body>
 
 </html>
