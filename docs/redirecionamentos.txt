@@ -1,0 +1,34 @@
+   # Redirecionamentos 301
+    location /linkedin {
+        return 301 https://www.linkedin.com/company/viaarto/about/;
+    }
+    location /whatsapp {
+        return 301 https://wa.me/5511912394099;
+    }
+    location /catalogo {
+        return 301 https://catalogo.viaartocorp.com.br/;
+    }
+    location /site {
+        return 301 https://corp.viaarto.com.br/;
+    }
+    location /email {
+        return 301 mailto:corporativo@viaarto.com.br;
+    }
+    location /instagram {
+        return 301 https://www.instagram.com/viaartobr;
+    }
+    location /agenda {
+        return 301 https://cal.com/viaarto;
+    }
+    location /bio {
+        return 301 https://bio.viaartocorp.com.br/;
+    }
+    location /link {
+        return 301 https://link.viaartocorp.com.br/;
+    }
+    location /blog {
+        return 301 https://corp.viaarto.com.br/blog/;
+    }
+    location /mapa {
+    return 301 https://www.google.com/maps/place/Via+Arto/;
+    }    
