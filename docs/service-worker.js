@@ -6,7 +6,7 @@ const urlsToCache = [
   '/css/skeleton-dark.css',
   '/css/brands.css',
   '/images/logo-viaarto-redondo-transparente.png',
-  '/images/hero-background.jpg',
+  '/images/hero-background.webp',
   '/fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2',
   '/images/icons/whatsapp.svg',
   '/images/icons/generic-homepage.svg',
